@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ user.name }}的观影列表</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+
+</head>
+<body>
+    <h2 class="title">
+        <div class="square"><img alt="Avatar" class="avatar" src="{{ url_for('static', filename='images/avatar.jpg') }}"></div>
+        {{ user.name }}'s Watchlist
+    </h2>
+    <img alt="404 Not Found" class="notfound" src="{{ url_for('static', filename='images/404.png') }}">
+    <ul class="movie-list">
+        <li>
+            找不到页面了----404
+            <span class="float-right">
+                <a href="{{ url_for('index') }}">返回引导</a>
+            </span>
+        </li>
+    </ul>
+    <footer>
+        <small>&copy; 2018 <a href="https://helloflask.com/book/3">HelloFlask</a></small>
+    </footer>
+</body>
+</html>
